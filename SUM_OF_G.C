@@ -1,0 +1,18 @@
+#include<stdio.h>
+void main()
+{
+double num=5,sum=0,i;
+clrscr();
+for(i=1;i<=num;i++)
+{
+sum=sum+(1/i);
+if(i==1)
+printf("\n 1+");
+else if(i==num)
+printf("(1/%1f)",i);
+else
+printf("(1/%1f)+"i);
+}
+printf("\n the sum of the given series is %.2f",);
+getch();
+}

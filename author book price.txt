@@ -1,0 +1,28 @@
+#include <stdio.h>
+struct Book {
+    char title[100];
+    char author[100];
+    float price;
+};
+int main() 
+{   
+    struct Book library[3]; 
+    sprintf(library[0].title, "Book 1");
+    sprintf(library[0].author, "Author 1");
+    library[0].price = 19.99;
+    sprintf(library[1].title, "Book 2");
+    sprintf(library[1].author, "Author 2");
+    library[1].price = 24.99;
+    sprintf(library[2].title, "Book 3");
+    sprintf(library[2].author, "Author 3");
+    library[2].price = 14.99;
+    printf("Library Contents:\n");
+    for (int i = 0; i < 3; i++) {
+        printf("Book %d\n", i + 1);
+        printf("Title: %s\n", library[i].title);
+        printf("Author: %s\n", library[i].author);
+        printf("Price: $%.2f\n", library[i].price);
+        printf("\n");
+    }
+    return 0;
+}
